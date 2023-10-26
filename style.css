@@ -1,0 +1,1092 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300;400;500;600;700;800&display=swap');
+
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Martian Mono', monospace;
+    text-decoration: none;
+}
+
+:root{
+    --bg-color:#dee2e6;
+    --button-color:#ef233c;
+}
+
+
+/* HEADER */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    padding: 0 20px;
+    z-index: 100;
+    box-shadow: 1px 1px 50px;
+    background-color: white;
+    
+}
+
+.brand-logo img{
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.brand-logo img:hover{
+    transform: scale(1.1);
+}
+
+.nav-links{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-between;
+    color: gray;
+}
+
+.nav-links a{
+    color: gray;
+    transition: all 0.3s ease;
+} 
+
+.nav-links a:hover{
+    color: black;
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    right: 0;
+}
+
+.login i{
+    color: gray;
+    transition: all 0.3s ease;
+}
+
+
+.login i:hover{
+    color: black;
+}
+
+
+/* MAIN SECTION */
+.headphone-section{
+    /* width: 100%; */
+    height: 100vh;
+    background-color: var(--bg-color);
+    margin: 30px;
+    margin-top: 8%;
+    border-radius: 25px;
+    position: relative;   
+}
+
+
+.headphone-section .headphone-texts{
+    
+    position: absolute;
+    min-width: 200px;
+    height: 75%;
+    top: 25%;
+    left: 5%;
+    padding: 0;
+}
+
+.headphone-section .headphone-texts h1{
+    display: inline-block;
+    color: white;
+    font-size:12rem;
+}
+
+.headphone-section .headphone-texts button{
+    font-size: 0.8rem;
+    background-color: var(--button-color);
+    color: white;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+}
+
+.headphone-section .headphone-texts button:hover{
+    transform: scale(1.1);
+}   
+
+.headphone-section .headphone-texts button:active{
+    transform: scale(1);
+}
+
+.headphone-section img{
+    width: 40%;
+    position: absolute;
+    z-index: 2;
+    top: -30%;
+    left: 45%;
+}
+
+.desc{
+    width: 20rem;
+    position: absolute;
+    text-align: end;
+    right: 3%;
+    bottom: 15%;
+}
+
+
+.desc-title{
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.desc-text{
+    color: gray;
+    font-size: 0.8rem;
+}
+
+
+/* PRODUCT-SECTION */
+.product-section{
+    height: 100vh;
+    margin: 30px;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+}
+
+.products{
+    background-color: #343a40;
+    border-radius: 25px;
+    position: relative;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.products:hover{
+    transform: scale(1.05);
+}
+
+.products:active{
+    transform: scale(1);
+}
+
+.products-text{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+}
+
+.products h5{
+    font-size: 1rem;
+    color: white;
+    pointer-events: none;
+    text-transform: capitalize;
+}
+
+.products h3{
+    font-size: 2rem;
+    color: white;
+    text-transform: capitalize;
+}
+
+.products h1{
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #6c757d;
+    text-transform: uppercase;
+}
+
+.products button{
+    background-color: var(--bg-color);
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px ;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+
+.products button:hover{
+    color: var(--button-color);
+    transform: scale(1.1);  
+}
+
+.products img{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 23%;
+    left: 30%;
+    object-fit: contain;
+    z-index: 3;
+}
+
+.watch-place{
+    background-color: var(--button-color);
+}
+
+.products .watch{  
+    top: 15%;
+    left: 27%;
+}
+
+.laptop-place, .console-place{
+    background-color: #b6ccfe;
+    grid-column: span 2;
+}
+
+.products .laptop{
+    width: 65%;
+    top: 10%;
+    left: 35%
+}
+
+.products .console{
+    top: 15%;
+    left: 30%;
+}
+
+.vr-place{
+    background-color: #1e6091;
+}
+
+.vr-texts{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+.products .vr{
+    width:65%;
+    height: 50%;
+    top: 53%;
+    left: 35%;
+}
+
+.products .speaker{
+    width: 75%;
+    height: 40%;
+    /* object-fit: contain; */
+    top: 55%;
+    left: 20%;
+}
+
+
+/* SERVICES */
+.services{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    margin: 100px 30px 0 30px;
+
+}
+
+.services-section{
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    padding: 10px 0;
+}
+
+.services-section:hover{
+    transform: scale(1.05);
+}
+
+.services-section:active{
+    transform: scale(1);
+}
+
+.services-place{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 5rem;
+}
+
+.services-logo{
+    color: var(--button-color);
+    margin: 10px;
+}
+
+.services-texts{
+    text-transform: capitalize;
+    padding: 10px;
+}
+
+.services-texts h4{
+    color: black;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.services-texts p{
+    color: #6c757d;
+    font-size: 0.8rem;
+}
+
+
+/* PROMOTION */
+.promotion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100vw; */
+    height: 100vh;
+    margin: 0 30px;
+    position: relative;
+}
+
+.promotion-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    width: 100%;
+    height: 400px;
+    background-color: var(--button-color);
+    border-radius: 20px;
+}
+
+.promotion-section img{
+    width: auto;
+    height: 70%;
+    position: absolute;
+    top: 8%;
+    left: 30%;
+}
+
+.promotion-left-text{
+    color: white;
+}
+
+.promotion-left-text p{
+    font-weight: 600;
+}
+
+.promotion-left-text h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.promotion-right-text{
+    /* border: 1px solid    blue; */
+    color: white;
+    margin-right: 50px;
+}
+
+.promotion-right-text p{
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.promotion-right-text h3{
+    padding: 10px 0;
+    font-weight: 900;
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+
+.promotion-right-text .company{
+    margin: 0 0 30px 0;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    font-weight: 100;
+}
+
+.promotion-right-text .shop-btn{
+    margin: 20px 0 0 0;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    /* color: var(--button-color); */
+    transition: all 0.3s ease;
+}
+
+.promotion-right-text .shop-btn:hover{
+    color: var(--button-color);
+    transform: scale(1.1);
+}
+
+
+/* BEST SELLER */
+.best-seller{
+    margin: 0 30px;
+}
+
+.best-header{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.texts{
+    text-align: center ;
+    color: gray;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+
+.best-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   
+    gap: 2rem;
+}
+
+.best{
+    margin: 40px 0;
+    position: relative;
+}
+
+.best-img{
+    width: 100%;
+    padding: 20px;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+}
+
+.best-img img{
+    object-fit: cover;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.best-img img:hover{
+    transform: scale(1.05);
+}
+
+.best-name{
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    padding: 20px 0;
+}
+
+.sale-badge{
+    width: 50px;
+    position: absolute;
+    top: 3%;
+    left: 5%;
+}
+
+.del{
+    color: gray;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.price{
+    font-weight: 900;
+}
+
+
+/* BLOGS */
+.blogs{
+    margin: 50px 30px 30px 30px;
+}
+
+.blog-section .blog-header{
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.blog-text{
+    font-size: 0.9rem;
+    color: gray;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.news{ 
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+    margin: 60px 0 20px 0;
+}
+
+.news .news-card{
+    transition: all 0.3s ease;
+}
+
+.news .news-card img{
+    object-fit: cover;
+    width: 100%;
+    height: 60%;
+    border-radius: 20px;
+   
+}
+
+.news .news-card:hover{
+    transform: scale(1.05);
+}
+
+.news-card p{
+    font-size: 0.8rem;
+    margin: 20px 0;
+    /* font-weight: 800; */
+}
+
+.news-date, .news-text{
+    color: gray;
+}
+
+.news-card .news-title{
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 900;
+}
+
+/* FOOTER */
+.footer-section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 2rem;
+    margin-top: 100px;
+    background-color: #f8f9fa;
+    /* border: 1px solid red; */
+}
+
+.footer-desc{
+    width: 15%;  
+}
+
+.footer-desc img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.footer-desc p{
+    font-size: 0.8rem;
+}
+
+.quick-links{
+    width: 15%;
+    
+}
+
+.quick-links p{
+    font-weight: 800;
+    padding: 20px 0;
+}
+
+.quick-links ul li{
+    padding: 5px 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.quick-links ul li a{
+    font-size: 0.9rem;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+.contact{
+    width: 20%;
+}
+
+.contact p{
+    font-weight: 800;
+    padding: 20px 0;
+}
+
+.contact ul li{   
+    font-size: 0.9rem;
+    padding: 15px 0;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+.contact ul li a{
+    color: black;
+}
+
+.contact ul li i{
+    margin-right: 20px;
+}
+
+.subscribe{
+    width: 30%;
+}
+
+.subscribe p {
+    font-weight: 800;
+    padding: 20px 0;
+    text-transform: capitalize;
+}
+
+.subscribe h3{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.subscribe .input-form{
+    
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: var(--bg-color);
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin: 30px 0 50px 0;
+}
+
+.subscribe input{
+    width: 100%;
+    font-size: 0.9rem;
+    border: none;
+    outline: none;
+    background-color: var(--bg-color);
+}
+
+.subscribe button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--button-color);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.subscribe button:active{
+    transform: scale(0.9);
+}
+
+.headphone-section .headphone-texts h5{
+    font-size: 2rem
+}
+
+.headphone-section .headphone-texts h3{
+    font-size: 5rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1440px) {
+    .headphone-section{
+        width: 96%;
+        margin-right: 30px;
+        margin-top: 10%;
+    }
+
+    .product-section .products-text h1{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width : 1275px) {
+    .headphone-section .headphone-texts h1{
+        /* color: red; */
+        font-size: 10rem;
+    }
+}
+
+@media (max-width: 1360px){
+    .headphone-section .headphone-texts h5{
+        
+        font-size: 1.5rem;
+    }
+
+    .headphone-section .headphone-texts h3{
+        font-size: 4.5rem;
+    }
+
+    .headphone-section .headphone-texts h1{
+        font-size: 10rem;
+    }
+
+    .headphone-section .headphone-texts button{
+        font-size: 0.7rem;
+    }
+
+    .headphone-section .headphone-texts .desc .desc-title{
+        font-size: 0.95rem;
+    }
+
+    .desc-text{
+        font-size: 0.7rem;
+    }
+
+    .product-section{
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        gap: 3rem;
+    }
+
+    .product-section .products{
+        height: 100%;
+    }
+
+    .products-text{
+        top: 20%;
+    }
+
+    .products .earphone{
+        top: 20%;
+    }
+
+    .laptop-place, .console-place{
+        grid-column: span 1;
+    }
+
+    .products .vr{
+        top: 50%;
+    }
+
+    .products .speaker{
+        top: 35%;
+        left: 35%;
+    }
+
+    .services{
+        gap: 2rem;
+    }
+
+    .services-section{
+        margin: 50px 0px 0 0px;
+        width: 18rem;
+    }
+
+    .services-texts h4{
+        font-size: 0.9rem;
+    }
+
+    .services-texts p{
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 1108px) {
+    .headphone-section .headphone-texts h5{
+        font-size: 1.3rem;
+    }
+    .headphone-section .headphone-texts h3{
+        font-size: 3.5rem;
+    }
+    .headphone-section .headphone-texts h1{
+        font-size: 9rem;
+    }
+
+    .product-section{
+        gap: 2rem;
+    }
+
+    .services-place{
+        width: 17rem;
+    }
+}
+
+@media (max-width: 1092px) {
+    .product-section{
+        gap: 1rem;
+    }
+    
+    .services-section{
+        width: 16rem;
+    }
+
+    .services-logo{
+        margin: 5px;
+        font-size: 0.9rem;
+    }
+
+    .services-texts{
+        line-height: 25px;
+    }
+
+    .services-texts h4{
+        font-size: 0.8rem;
+    }
+    
+    .services-texts p{
+        font-size: 0.7rem;
+    }
+
+    .promotion-right-text{
+        text-align: end;
+        margin: 0;
+    }
+    
+    .desc {
+        right: 3%;
+        bottom: 35%;
+    }
+}
+
+@media (max-width: 1076px) {
+    .product-section{
+        grid-template-columns: repeat(auto-fill,  minmax(400px, 1fr));
+    }
+
+    .products img{
+
+    }
+    
+    .products .laptop{
+        width: 50%;
+        left: 50%;
+    }
+
+    .products .speaker{
+        left: 42%;
+    }
+
+    .products button{
+        font-size: 0.7rem;
+        margin: 10px 0;
+    }
+
+    .products h3{
+        font-size: 1.8rem;
+    }
+
+    .product-section .products-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .desc {
+        right: 3%;
+        bottom: 35%;
+    }
+}
+
+@media (max-width:1050px) {
+    .headphone-section .headphone-texts h1 {
+        font-size: 7.5rem;
+    }
+
+    .desc {
+        right: 3%;
+        bottom: 35%;
+    }
+}
+
+@media (max-width : 876px) {
+    .product-section .products-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .products-text, .vr-texts{
+        position: relative;
+    }
+
+    .products h3  {
+        font-size: 1rem;
+    }
+
+     .products h5{
+        font-size: 0.8rem;
+     }
+
+    .products button{
+        padding: 10px 15px;
+        font-size: 0.5rem;
+        position: absolute;
+        top: 30%;
+        right: 10%;
+    }
+
+    .vr-texts h1{
+        font-size: 1.5rem;
+    }
+
+    .vr-texts .vr-btn, .vr-texts .speaker-btn{
+        top: 50%;
+    }
+
+    .products .speaker {
+        left: 30%;
+    }
+
+    .desc {
+        right: 3%;
+        bottom: 35%;
+    }
+}
+
+@media (max-width : 768px){
+    .nav-links{
+        display: none;
+    }
+
+    .headphone-section .headphone-texts h1{
+        font-size: 6rem;
+    }
+
+    .headphone-section img {
+        top: -20%;
+        left: 48%;
+    }
+
+    .services{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        /* align-items: center;  */
+        justify-items: center;
+    }
+
+    .services-texts p{
+        padding: 2px;
+    }
+
+    .promotion-right-text p{
+        font-size: 0.8rem;
+    }
+
+    .promotion-right-text h3{
+        font-size: 1.8rem;
+    }
+
+    .promotion-right-text .company{
+        font-size: 0.6rem;
+    }
+
+    .promotion-left-text h1{
+        font-size: 4rem;
+    }
+
+    .promotion-section img{
+        height: 53%;
+        top: 13%;
+        left: 25%;
+    }
+
+    .promotion-right-text .shop-btn{
+        font-size: 0.7rem;
+    }
+
+    .news{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .footer-section{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        /* border: 1px solid blue; */
+    }
+
+    .footer-section div{
+        width: 100%;
+        /* border: 1px solid red; */
+        background-color: #f8f9fa;
+        padding: 10px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width : 426px){
+
+    .headphone-section img {
+        width: 65%;
+        top: -56%;
+        left: 16%;
+    }
+    .headphone-section .headphone-texts h5 {
+        font-size: 1rem;
+    }
+    .headphone-section .headphone-texts h3 {
+        font-size: 2.5rem;
+    }
+
+    .headphone-section .headphone-texts h1 {
+        font-size: 3.5rem;
+    }
+
+    .headphone-section .headphone-texts {
+        position: absolute;
+        min-width: 200px;
+        height: 74%;
+        top: 46%;
+        left: 5%;
+        padding: 0;
+    }
+
+    .headphone-section img {
+        top: -53%;
+        left: 19%;
+    }
+    
+
+    .headphone-section .headphone-texts button{
+        padding: 15px 13px;
+    }
+
+    .headphone-section .headphone-texts .desc .desc-title {
+        font-size: 0.85rem;
+    }
+
+    .desc-text {
+        font-size: 0.6rem;
+    }
+
+    .promotion-section{
+        align-items: end;
+        padding: 20px;
+    }
+
+    .promotion-section img {
+        height: 45%;
+        top: 10%;
+        left: 15%;
+    }
+
+    .promotion-section img {
+        height: 45%;
+        top: 15%;
+        left: 15%;
+    }
+
+    text p {
+        font-size: 0.2rem;
+        font-weight: 400;
+    }
+
+    .promotion-left-text h1 {
+        font-size: 2rem;
+    }
+
+    .promotion-right-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .promotion-right-text .company {
+        font-size: 0.4rem;
+        margin-bottom: 10px;
+    }
+
+    .promotion-right-text .shop-btn {
+        margin-top: 0;
+        padding: 10px 30px;
+        border: none;
+        border-radius: 20px;
+    }
+    .news{
+        gap: 3rem;
+    }
+
+    .footer-section{
+        text-align: center;
+    }
+}
